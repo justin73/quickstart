@@ -1,5 +1,16 @@
 <!--if you want to get the observable data without looping use ng-if then add an ? after your ng var then call the property-->
 <!--{{user?.name}}-->
+<div class="row">
+    <div class="col-md-12">
+        <form>
+            <div class="form-group">
+                <!--when you want to use ngModel for two way binding for an input inside a form, then the input must have a name attr-->
+                <input class="form-control" type="text" name="seachBar" placeholder="Enter A Github Username ..."
+                 [(ngModel)]='username' (keyup)='searchUser()'>
+            </div>
+        </form>
+    </div>
+</div>
 <div *ngIf="user">
     <div class="panel panel-default">
         <div class="panel-heading">
